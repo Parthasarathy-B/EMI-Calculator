@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EMI Calclator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <h1>EMI Calculator</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-7">
+                <div class="row set">
+                    <div class="col-md-6 text-left">
+                        <label for="loanAmount">Loan Amount (in rupees)</label>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <input type="number" id="loanAmount">
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="range" id="loanAmountSlider" min="1" max="1000000" step="1" value="300000">
+                </div>
+                <div class="row">
+                    <div class="col-md-4 text-left" id="minValue">1</div>
+                    <div class="col-md-4 text-center" id="midValue">500000</div>
+                    <div class="col-md-4 text-right" id="maxValue">1000000</div>
+                </div>
+                    
+
+                <div class="row set">
+                    <div class="col-md-6">
+                        <label for="interestRate">Interest Rate (% P.A)</label>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <input type="number" id="interestRate">
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="range" id="interestRateSlider" min="1" max="40" step="1" value="12">
+                </div>
+                <div class="row">
+                    <div class="col-md-4 text-left" id="minValue">1</div>
+                    <div class="col-md-4 text-center" id="midValue">20</div>
+                    <div class="col-md-4 text-right" id="maxValue">40</div>
+                </div>
+
+                <div class="row set">
+                    <div class="col-md-6">
+                        <label for="emiTime">Tenure (in months)</label>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <input type="number" id="emiTime">
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="range" id="emiTimeSlider" min="1" max="240" step="1" value="24">
+                </div>
+                <div class="row">
+                    <div class="col-md-4 text-left" id="minValue">1</div>
+                    <div class="col-md-4 text-center" id="midValue">120</div>
+                    <div class="col-md-4 text-right" id="maxValue">240</div>
+                </div>
+            </div>
+
+
+            <div class="col-md-5">
+                <div class="card text-white resultCard">
+                    <div class="card-body">
+                        <div class="container-fluid">
+                            <div class="row-md-12">
+                                <div class="col-md-12 mt-4">
+                                    <div class="row" id="emititle">Your EMI is</div>
+                                    <div class="row" id="emiResult"></div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row-md-12">
+                                <div class="col-md-5">
+                                    <div class="row" id="interesttitle">Total Interest</div>
+                                    <div class="row" id="interestResult"></div>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="row" id="payabletitle">Total Payable Amount</div>
+                                    <div class="row" id="payableResult"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+            
+        </div>
+
+        <div class="row">
+            <center><div id="chart"></div></center>
+            
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+    <script src="script.js"></script>
+
+</body>
+
+</html>
